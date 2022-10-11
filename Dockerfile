@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
+COPY frontend/package.json frontend/package-lock.json .frontend/
+
 RUN npm i
 
 RUN npm run build
