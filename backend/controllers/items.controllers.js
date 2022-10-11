@@ -405,7 +405,7 @@ export const getProducts = async (id) => {
       let asd = await pages[i].getData(page, id);
       response = [...response, ...asd];
     }
-
+    await page.close();
     await browser.close();
 
     return response;
