@@ -4,7 +4,9 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-RUN npm ci
+RUN npm i
+
+RUN npm run build
 
 COPY . .
 
@@ -14,4 +16,4 @@ RUN chown -R drennan /app
 
 USER drennan
 
-CMD ["npm","run","build","npm","start"]
+CMD ["node", "app/backend/index.js"]
