@@ -1,9 +1,17 @@
-FROM mcr.microsoft.com/playwright:v1.24.0-focal
+FROM mcr.microsoft.com/playwright:v1.22.0-focal
+
+WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-RUN npm i
+RUN npm ci
 
 COPY . .
 
-CMD ["npm","run","build", "npm", "start"]
+RUN useradd -m drennan
+
+RUN chown -R drennan /app
+
+USER drennan
+
+CMD ["npm","run","build","npm","start"]
