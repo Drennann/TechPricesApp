@@ -1,0 +1,86 @@
+*{
+  margin:auto;
+  text-align: center;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #414141 #121212;
+  user-select: none;
+}
+
+*::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #414141;
+  border-radius: 10px;
+}
+
+.App {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  place-content: center;
+  background-color: #13111C;
+  color: #d0d0d0;
+}
+
+.itemInput {
+  background-color: transparent;
+  border: 1px solid #414141;
+  color: #d0d0d0;
+  height: 30px;
+  border-radius: 15px;
+  width: 240px;
+}
+
+.itemInput:focus-visible {
+  outline: none;
+}
+
+.itemsFoundedContainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  display: grid;
+}
+
+.DetailsCard {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.DetailsCard:hover {
+}
+
+.ListItemsContainer {
+  margin-top: 50px;
+  background-color: transparent;
+  display: grid;
+  width: 60%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+  grid-auto-rows: 400px;
+  justify-content: space-evenly;
+}
+
+.CheapApp{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.title{
+  margin-bottom: 22px;
+  font-size: 40px;
+}
+
+.Loader{
+  height: 100px;
+  width: 100px;
+  background-color: #d0d0d0;
+}
