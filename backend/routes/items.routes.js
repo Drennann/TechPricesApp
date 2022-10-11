@@ -9,7 +9,7 @@ itemRouter.get("/:id", async (req, res) =>{
         let {id} = req.params
         id = id.toLowerCase().trim();
         const haydatos = await Data.find({input: id});
-        if(haydatos.length > 0 && haydatos[0].timestamp + 1000*2*24*60*60> Date.now()){
+        if(haydatos.length > 0 && haydatos[0].timestamp + 1000*2*24*60*60*15> Date.now()){
             res.json({data:haydatos})
         }else{
             const tmp = await getProducts(id);
